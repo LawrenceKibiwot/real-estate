@@ -1,0 +1,46 @@
+body {
+    font-family: 'Poppins';
+}
+.img-rounded{
+    border-radius: 5%;
+}
+.img-padding{
+    margin-top: 7%;
+}
+/* product card css */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 280px;
+    margin: 5px;
+    float: left;
+    height: 460px;
+    text-align: center;
+    font-family: arial;
+    border-radius: 5%;
+  }
+  
+  .price {
+    color: grey;
+    font-size: 18px;
+  }
+  
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5%;
+    width: 95%;
+    font-size: 18px;
+    max-width: inherit;
+  }
+  
+  .card button:hover {
+    opacity: 0.5;
+  }
+  footer{
+    background-color: darkgrey;
+  }
