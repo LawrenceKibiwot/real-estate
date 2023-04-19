@@ -15,12 +15,13 @@ class CreatePostsTable extends Migration
     {
         Schema::create('Listings', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
             $table->string('listing_name');
             $table->string('location');
             $table->string('type');
             $table->integer('rent');
             $table->integer('size');
+            $table->string('status')->default('Vaccant');
+            $table->timestamps();
         });
     }
 
