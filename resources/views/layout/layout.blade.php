@@ -12,20 +12,22 @@
 </head>
 
 <body class="antialiased">
+    <div class="container-fluid">
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">Realtor Property Management</a>
+            <a class="navbar-brand" href="/home">Realtor Property Management</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav">
+                
                     <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
+                        <a class="nav-link" href="/list">Listings</a>
+                    </li>  <li class="nav-item">
+                        <a class="nav-link" href="/admin">Dashboard</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/admin">Admin Panel</a>
-                    </li>
+                    
                     {{-- <li class="nav-item">
                 <a class="nav-link" href="/upload">Upload</a>
               </li> --}}
@@ -34,20 +36,21 @@
         </div>
     </nav>
     @yield('content')
-
+    <div class="row footer">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
     </script>
-    <div class="footer">
-      <br>
+  
+
         <footer>
             <b>Realtor Property Management</b>
-            <a href="mailto:biwotlawrence@gmail.com">
-                <p>Author: Lawrence<br>
+            <a href="mailto:biwotlawrence@gmail.com" class="link">
+                <p>Author: Bridget Waweru<br>
             </a></p>
         </footer>
 
     </div>
+</div>
 </body>
 
 </html>
