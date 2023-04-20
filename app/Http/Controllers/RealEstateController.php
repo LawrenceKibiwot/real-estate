@@ -23,8 +23,8 @@ class RealEstateController extends Controller
     function admin()
     {
         // $data = DB::table('Listings');
-        $data = DB::table('listings')->count();
-        $vaccant = DB::table('listings')->select(DB::raw('count(*) as user_count, status'))
+        $data = DB::table('Listings')->count();
+        $vaccant = DB::table('Listings')->select(DB::raw('count(*) as user_count, status'))
             ->where('status', 'Vaccant');
         return view('/admin', ['total' => $data, 'empty' => $vaccant]);
     }
@@ -58,12 +58,12 @@ class RealEstateController extends Controller
     function update(Request $request)
     {
         $id = $request->id;
-        $payload = DB::table('listings')->where('id', $id)->get();
+        $payload = DB::table('Listings')->where('id', $id)->get();
         return view('edit', ['post' => $id, 'payload' => $payload]);
     }
     function link_tenant()
     {
-        $data = DB::table('listings')->where('status', '=', 'Vaccant')->get();
+        $data = DB::table('Listings')->where('status', '=', 'Vaccant')->get();
         return view('/link_tenant', ['data' => $data]);
     }
     function tenant_reg(Request $request)
@@ -131,7 +131,6 @@ class RealEstateController extends Controller
         $type_column = $request->type;
         $status_column = $request->status;
         $sort = DB::table('Listings')->orderBy($sort_column, 'asc')->get();
-        // $list = DB::table('Listings')->get();
         $type = DB::table('Listings')->where('type', '=', $type_column)->get();
         $status = DB::table('Listings')->where('status', '=', $status_column)->get();
         if (isset($type_column)) {
